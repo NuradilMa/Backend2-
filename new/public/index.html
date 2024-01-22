@@ -1,0 +1,228 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>City Information Form</title> 
+    <link rel="stylesheet" href="./header.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+</head> 
+<body> 
+    <div class="container">
+        <header class="site-header">
+            <div class="header__content--flow">
+                <section class="header-content--left">
+                    <a href="#" class="brand-logo">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.098.649A12.037 12.037 0 0 0 1.088 7h3.525C5.305 4.302 6.541 2.065 8.098.65ZM6.544 7C7.359 3.45 9.014.832 11 .166V7H6.544Zm-2.33 2H.378A12.022 12.022 0 0 0 0 12c0 1.403.24 2.749.683 4h3.703A20.558 20.558 0 0 1 4 12c0-1.032.074-2.037.214-3Zm2.127 7A23.07 23.07 0 0 1 6 12c0-1.036.066-2.041.189-3H11v7H6.341Zm-1.44 2H1.605a12.037 12.037 0 0 0 6.493 5.351c-1.36-1.237-2.475-3.1-3.197-5.35ZM11 23.834C9.205 23.232 7.681 21.037 6.803 18H11v5.834Zm4.902-.483a12.037 12.037 0 0 0 6.493-5.35h-3.296c-.722 2.25-1.837 4.113-3.197 5.35ZM17.197 18c-.878 3.037-2.402 5.232-4.197 5.834V18h4.197Zm2.417-2h3.703A11.98 11.98 0 0 0 24 12c0-1.036-.131-2.041-.378-3h-3.836c.14.963.214 1.968.214 3 0 1.396-.135 2.74-.386 4Zm-1.803-7c.123.959.189 1.964.189 3 0 1.403-.12 2.749-.341 4H13V9h4.811Zm-.355-2H13V.166C14.986.832 16.641 3.45 17.456 7Zm1.931 0c-.692-2.698-1.928-4.935-3.485-6.351A12.037 12.037 0 0 1 22.912 7h-3.525Z" />
+                        </svg>
+                        <span class="logo-text">API SiTe</span>
+                    </a>
+                    <button class="nav-toggle">
+                        <span class="toggle--icon"></span>
+                    </button>
+                </section>
+                <section class="header-content--right">
+                    <nav class="header-nav" role="navigation">
+                        <ul class="nav__list" aria-expanded="false">
+                            <li class="list-item">
+                                <a class="nav__link" href="index.html">Home</a>
+                            </li>
+                            <li class="list-item">
+                                <a class="nav__link" href="./weather/weather.html">Weather</a>
+                            </li>
+                            <li class="list-item">
+                                <a class="nav__link" href="./nasa/nasa.html">NASA</a>
+                            </li>
+                            <li class="list-item">
+                                <a class="nav__link" href="./currency/currency.html">Currecy</a>
+                            </li>
+                            <li class="list-item">
+                                <a class="nav__link" href="#">Contact</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </section>
+            </div>
+        </header>
+      
+    </div>
+    <!-- Grid -->
+<div class="w3-row">
+
+    <!-- Blog entries -->
+    <div class="w3-col l8 s12">
+      <!-- Blog entry -->
+      <div class="w3-card-4 w3-margin w3-white">
+        <img src="./img/api.jpg" alt="Nature" style="width:100%">
+        <div class="w3-container">
+          <h3><b>Exploring API Integration in Node.js</b></h3>
+          <h5>API integration in Node.js allows seamless communication and data exchange with external services, unlocking a world of possibilities for developers. <span class="w3-opacity">Jan 19, 2024</span></h5>
+        </div>
+    
+        <div class="w3-container">
+          <p>To integrate an API into your Node.js application, you need to understand the basics of making HTTP requests. Node.js provides built-in modules like http and https, as well as popular third-party libraries like axios and request, which simplify the process of sending HTTP requests and receiving responses.
+            <br><br>Once you've retrieved the API response, you'll need to handle it appropriately. This includes error handling, checking for status codes, and parsing the response data. APIs typically return data in JSON format, so you'll often use JSON parsing methods like JSON.parse() or built-in functionality like response.body to access the desired information.
+          
+        <br>
+        <br>
+          </p>
+          <div class="w3-row">
+            <div class="w3-col m8 s12">
+              <p><button class="w3-button w3-padding-large w3-white w3-border"><b>READ MORE »</b></button></p>
+            </div>
+            <div class="w3-col m4 w3-hide-small">
+              <p><span class="w3-padding-large w3-right"><b>Comments  </b> <span class="w3-tag">0</span></span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr>
+    
+      <!-- Blog entry -->
+      <div class="w3-card-4 w3-margin w3-white">
+      <img src="./img/NASA2.jpg" alt="Norway" style="width:100%" class="nasa">
+        <div class="w3-container">
+          <h3><b> Exploring the Cosmos with NASA API Integration in Node.js</b></h3>
+          <h5>Discover how to integrate NASA's API into your Node.js applications. <span class="w3-opacity">Jan 19, 2024</span></h5>
+        </div>
+    
+        <div class="w3-container">
+          <p>To implement NASA API integration in your Node.js application, follow these steps:
+
+<br><br>
+           <strong>Make API requests:</strong>  Visit the NASA API website and sign up for an API key. This key is required to authenticate your requests and access the API's resources.
+            <br><br>            
+            <strong>Install necessary dependencies:</strong>  In your Node.js project directory, use npm or yarn to install any required dependencies. For example, you may need to install the axios library to make HTTP requests or any other libraries specific to your project's needs.
+            <br><br>
+            <strong>Set up API authentication: </strong>In your Node.js code, include your API key as a query parameter or in the headers of your HTTP requests. This ensures that NASA's API can authenticate your requests and grant you access to the data.
+            <br><br>
+            <strong>Make API requests:</strong> Use the axios library or any other preferred HTTP client library to make requests to NASA's API endpoints. You can fetch images, mission details, scientific data, and more by specifying the appropriate endpoint and query parameters.
+            <br><br>
+            <strong>Handle API responses:</strong> Once you receive a response from the API, you can parse the JSON data using Node.js's built-in JSON parsing capabilities. Extract the relevant information from the response and utilize it in your application as needed.
+            <br><br>
+            <strong>Implement desired functionality:</strong> With the retrieved data, you can create captivating space-themed experiences in your application. Display stunning images, provide mission details, or develop interactive features using the astronomical data obtained from NASA's API..</p>
+            <br><br>
+            <div class="w3-row">
+            <div class="w3-col m8 s12">
+              <p><button class="w3-button w3-padding-large w3-white w3-border"><b>READ MORE »</b></button></p>
+            </div>
+            <div class="w3-col m4 w3-hide-small">
+              <p><span class="w3-padding-large w3-right"><b>Comments  </b> <span class="w3-badge">2</span></span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- END BLOG ENTRIES -->
+    </div>
+    
+    <!-- Introduction menu -->
+    <div class="w3-col l4">
+      <!-- About Card -->
+      <div class="w3-<div class="w3-col l8 s12">
+      <!-- Blog entry -->
+      <div class="w3-card-4 w3-margin w3-white">
+        <img src="./img/hqdefault.jpg" alt="Nature" style="width:100%">
+        <div class="w3-container">
+          <h3><b>Harnessing Weather Data with OpenWeather API Integration in Node.js</b></h3>
+          <h5>Implementing OpenWeather API step by step,<span class="w3-opacity">Jan 19, 2024</span></h5>
+        </div>
+    
+        <div class="w3-container">
+          <p>To integrate the OpenWeather API into your Node.js application, follow these step-by-step instructions:
+
+<br><br>
+            <strong>Sign up for an API key:</strong> Visit the OpenWeather website and sign up for an API key. This key is necessary to authenticate your requests and gain access to the OpenWeather API resources.
+            <br><br>
+            <strong>Install necessary dependencies</strong>: In your Node.js project directory, use npm or yarn to install any required dependencies. For example, you may need to install the axios library to make HTTP requests or any other libraries specific to your project's needs.
+            <br><br>
+            <strong>Set up API authentication:</strong> In your Node.js code, include your API key as a query parameter or in the headers of your HTTP requests.
+            <br><br>
+            <strong>Make API requests:</strong> Use the axios library or any other preferred HTTP client library to make requests to the OpenWeather API endpoints.</p>
+          <div class="w3-row">
+            <div class="w3-col m8 s12">
+              <p><button class="w3-button w3-padding-large w3-white w3-border"><b>READ MORE »</b></button></p>
+            </div>
+            <div class="w3-col m4 w3-hide-small">
+              <p><span class="w3-padding-large w3-right"><b>Comments  </b> <span class="w3-tag">0</span></span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr>
+    
+      <!-- Blog entry -->
+      <div class="w3-card-4 w3-margin w3-white">
+        <img src="https://publicapis.dev/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdev-resources%2Fimage%2Fupload%2Fresources%2Fscreenshots%2F870afbb8-20c2-46ed-bae8-786d62b99071.png&w=3840&q=75" alt="Currency" style="width:100%">
+        <div class="w3-container">
+          <h3><b>Currency Exchange Rate Web Application</b></h3>
+          <h5>Real-time Exchange Rates<span class="w3-opacity">Jan 19, 2024</span></h5>
+        </div>
+      
+        <div class="w3-container">
+          <p>The Currency Exchange Rate Web Application is a Node.js application using the Express framework.
+            <br><br>
+            Express: The Express framework is utilized to create the server and handle HTTP requests.
+            <br><br>
+            Routing: The application defines a route to retrieve real-time exchange rates based on user queries.
+            <br><br>
+            Axios: The 'axios' library is used to make HTTP requests to the Open Exchange Rates API and fetch real-time exchange rate data.
+            <br><br>
+            Display: The application displays the exchange rates in a user-friendly format on the web page.
+            <br><br>
+            Styling: The web page is styled using CSS to enhance the visual presentation of the exchange rate information.
+            <br><br>
+          </p>
+          <div class="w3-row">
+            <div class="w3-col m8 s12">
+              <p><button class="w3-button w3-padding-large w3-white w3-border"><b>READ MORE »</b></button></p>
+            </div>
+            <div class="w3-col m4 w3-hide-small">
+              <p><span class="w3-padding-large w3-right"><b>Comments  </b> <span class="w3-badge">0</span></span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    <!-- END BLOG ENTRIES -->
+    </div>
+    
+      
+    
+     
+      <!-- Labels / tags -->
+      <div class="w3-card w3-margin">
+        <div class="w3-container w3-padding">
+          <h4>Tags</h4>
+        </div>
+        <div class="w3-container w3-white">
+        <p><span class="w3-tag w3-black w3-margin-bottom">API</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Best Project</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Score:100%</span>
+          <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Dariya Bissengaliyeva</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">WebFron(BackEnd)</span>
+          <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">NODE JS</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Best Teacher</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Best Student</span>
+          <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">BackEnd </span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Clothing</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Shopping</span>
+          <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Sports</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Games</span>
+        </p>
+        </div>
+      </div>
+      
+    <!-- END Introduction Menu -->
+    </div>
+    
+    <!-- END GRID -->
+    </div><br>
+    
+    <!-- END content -->
+    </div>
+    
+    <!-- Footer -->
+    <footer class="w3-container w3-dark-grey w3-padding-32 w3-margin-top">
+    
+      <p>Mussakhanov Nuradil, <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">SE-2207</a></p>
+    </footer>
+</body> 
+<script src="../main.js"></script>
+
+  
+<script src="https://unpkg.com/mapbox-gl@2.11.2/mapbox-gl.js"></script>
+</html>

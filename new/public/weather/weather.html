@@ -1,0 +1,155 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>City Information Form</title> 
+    <link rel="stylesheet" href="../header.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+    <script src='https://api.mapbox.com/mapbox-gl-js/v3.1.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v3.1.0/mapbox-gl.css' rel='stylesheet' />
+    
+
+</head> 
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+    }
+    h2 {
+        color: #333;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    input {
+        padding: 10px;
+        margin: 5px;
+        width: 100%;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    button:hover {
+        background-color: #45a049;
+    }
+</style>
+<body> 
+    <div class="container">
+        <header class="site-header">
+            <div class="header__content--flow">
+                <section class="header-content--left">
+                    <a href="#" class="brand-logo">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.098.649A12.037 12.037 0 0 0 1.088 7h3.525C5.305 4.302 6.541 2.065 8.098.65ZM6.544 7C7.359 3.45 9.014.832 11 .166V7H6.544Zm-2.33 2H.378A12.022 12.022 0 0 0 0 12c0 1.403.24 2.749.683 4h3.703A20.558 20.558 0 0 1 4 12c0-1.032.074-2.037.214-3Zm2.127 7A23.07 23.07 0 0 1 6 12c0-1.036.066-2.041.189-3H11v7H6.341Zm-1.44 2H1.605a12.037 12.037 0 0 0 6.493 5.351c-1.36-1.237-2.475-3.1-3.197-5.35ZM11 23.834C9.205 23.232 7.681 21.037 6.803 18H11v5.834Zm4.902-.483a12.037 12.037 0 0 0 6.493-5.35h-3.296c-.722 2.25-1.837 4.113-3.197 5.35ZM17.197 18c-.878 3.037-2.402 5.232-4.197 5.834V18h4.197Zm2.417-2h3.703A11.98 11.98 0 0 0 24 12c0-1.036-.131-2.041-.378-3h-3.836c.14.963.214 1.968.214 3 0 1.396-.135 2.74-.386 4Zm-1.803-7c.123.959.189 1.964.189 3 0 1.403-.12 2.749-.341 4H13V9h4.811Zm-.355-2H13V.166C14.986.832 16.641 3.45 17.456 7Zm1.931 0c-.692-2.698-1.928-4.935-3.485-6.351A12.037 12.037 0 0 1 22.912 7h-3.525Z" />
+                        </svg>
+                        <span class="logo-text">API SiTe</span>
+                    </a>
+                    <button class="nav-toggle">
+                        <span class="toggle--icon"></span>
+                    </button>
+                </section>
+                <section class="header-content--right">
+                    <nav class="header-nav" role="navigation">
+                        <ul class="nav__list" aria-expanded="false">
+                            <li class="list-item">
+                                <a class="nav__link" href="../index.html">Home</a>
+                            </li>
+                            <li class="list-item">
+                                <a class="nav__link" href="./weather.html">Weather</a>
+                            </li>
+                            <li class="list-item">
+                                <a class="nav__link" href="../nasa/nasa.html">NASA</a>
+                            </li>
+                            <li class="list-item">
+                                <a class="nav__link" href="../currency/currency.html">Currecy</a>
+                            </li>
+                            <li class="list-item">
+                                <a class="nav__link" href="#">Contact</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </section>
+            </div>
+        </header>
+        <div class="w3-card-4 w3-margin w3-white">
+            <img src="../img/hqdefault.jpg" alt="OpenWeather" style="width:100%">
+            <div class="w3-container">
+              <h3><b>Weather Information Web Application</b></h3>
+              <h5>Real-time Weather Updates<span class="w3-opacity">Jan 19, 2024</span></h5>
+            </div>
+          
+            <div class="w3-container">
+              <p>The Weather Information Web Application is a Node.js application utilizing the Express framework to provide real-time weather updates.
+                <br><br>
+                Express: The Express framework is used to create the server and handle HTTP requests.
+                <br><br>
+                Routing: The application defines a route to retrieve real-time weather information based on user queries using the OpenWeather API.
+                <br><br>
+                Axios: The 'axios' library is employed to make HTTP requests to the OpenWeather API and fetch real-time weather data.
+                <br><br>
+                Display: The application presents weather details such as temperature, description, and an icon in a user-friendly format on the web page.
+                <br><br>
+                Styling: CSS styles are applied to enhance the visual presentation of the weather information.
+                <br><br>
+              </p>
+              <div class="w3-row">
+                <div class="w3-col m8 s12">
+                  <p><button class="w3-button w3-padding-large w3-white w3-border"><b>READ MORE »</b></button></p>
+                </div>
+                <div class="w3-col m4 w3-hide-small">
+                  <p><span class="w3-padding-large w3-right"><b>Comments  </b> <span class="w3-badge">0</span></span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          
+        <h2>City Info</h2> 
+     
+        <form action="/" method="post"> 
+            <input type="text" id="city" name="city" placeholder="Enter city"required> 
+            <br>
+            <br> 
+            
+            <button type="submit">Sumbit</button> 
+        </form> 
+    </div>
+    <div id='map' style='width: 100%; height: 300px;'></div>
+    <footer class="w3-container w3-dark-grey w3-padding-32 w3-margin-top">
+    
+        <p>Mussakhanov Nuradil, <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">SE-2207</a></p>
+</body> 
+<script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoibnVyYWRpbG11c3NhayIsImEiOiJjbHJvdGk4ZDgwaHJyMmhtaWt3OWN4cXJ0In0.wtDBv6yGFKwrJfEFj4jDig';
+    const map = new mapboxgl.Map({
+        container: 'map', // container ID
+        style: 'mapbox://styles/mapbox/streets-v12', // style URL
+        center: [-74.5, 40], // starting position [lng, lat]
+        zoom: 9, // starting zoom
+    });
+    </script>
+<script src="../../main.js"></script>
+
+</html>
